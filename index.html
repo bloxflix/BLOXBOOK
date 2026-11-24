@@ -1,2 +1,262 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BLOXBOOK</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 75px;
+  background: #050505;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.blox {
+  color: white;
+}
+
+.book {
+  color: #ff6b00;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff6b00;
+}
+
+.hero {
+  min-height: calc(100vh - 75px);
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 85% 50%,
+    rgba(255,107,0,.15),
+    transparent 40%),
+    #050505;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.tag {
+  color: #ff6b00;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 75px;
+  line-height: .95;
+  margin-bottom: 30px;
+}
+
+h1 span {
+  color: #ff6b00;
+}
+
+p {
+  color: #aaa;
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.orange {
+  background: #ff6b00;
+  color: white;
+}
+
+.dark {
+  background: #292929;
+  color: white;
+}
+
+section {
+  padding: 70px 7%;
+  border-top: 1px solid #181818;
+}
+
+section h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+section h2 span {
+  color: #ff6b00;
+}
+
+footer {
+  padding: 30px 7%;
+  background: #020202;
+  color: #666;
+}
+
+footer span {
+  color: #ff6b00;
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="#inicio" class="logo">
+<span class="blox">BLOX</span><span class="book">BOOK</span>
+</a>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#descubra">Descubra</a>
+<a href="#sobre">Sobre</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+<div class="content">
+
+<div class="tag">BLOXBOOK</div>
+
+<h1>
+Histórias<br>
+<span>começam aqui.</span>
+</h1>
+
+<p>
+Um novo espaço para descobrir histórias,
+acompanhar autores e explorar novos universos.
+</p>
+
+<div class="buttons">
+
+<a href="#descubra" class="button orange">
+Explorar
+</a>
+
+<a href="#sobre" class="button dark">
+Sobre nós
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="descubra">
+
+<h2>Descubra.</h2>
+
+<p>
+A BLOXBOOK está sendo construída para reunir
+leitores, autores e novas histórias em um só lugar.
+</p>
+
+</section>
+
+<section id="sobre">
+
+<h2>
+Sobre a <span>BLOXBOOK</span>
+</h2>
+
+<p>
+Uma plataforma dedicada a histórias e novos universos.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 <span>BLOXBOOK</span> — Todos os direitos reservados.
+</footer>
+
+</body>
+</html>

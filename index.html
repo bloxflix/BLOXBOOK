@@ -4,32 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>O Último Horizonte | BLOXBOOK</title>
+  <title>BLOXBOOK</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #000;
       color: #fff;
-      line-height: 1.7;
     }
 
     header {
-      padding: 25px 8%;
-      border-bottom: 1px solid #222;
+      height: 75px;
+      padding: 0 8%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 900;
       letter-spacing: -1px;
     }
@@ -53,17 +53,24 @@
       color: #ff7a00;
     }
 
+    /* INÍCIO */
+
     .hero {
-      min-height: 500px;
-      padding: 90px 8%;
+      min-height: 520px;
+      padding: 100px 8%;
       display: flex;
       align-items: center;
+
       background:
-        radial-gradient(circle at 80% 50%, #3a1d00 0%, #000 45%);
+        radial-gradient(
+          circle at 80% 50%,
+          #351b00 0%,
+          #000 45%
+        );
     }
 
     .hero-content {
-      max-width: 750px;
+      max-width: 700px;
     }
 
     .tag {
@@ -71,115 +78,216 @@
       font-size: 13px;
       font-weight: bold;
       letter-spacing: 3px;
-      text-transform: uppercase;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: clamp(42px, 8vw, 82px);
-      line-height: 0.95;
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 82px);
+      line-height: .95;
       margin-bottom: 25px;
     }
 
-    .description {
-      color: #bbb;
-      max-width: 650px;
-      font-size: 17px;
-    }
-
-    .book-info {
-      padding: 60px 8%;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .book-info h2 {
-      color: #ff7a00;
-      margin-bottom: 20px;
-      font-size: 30px;
-    }
-
-    .book-info p {
-      color: #ccc;
-      margin-bottom: 25px;
-    }
-
-    .chapter {
-      padding: 70px 8%;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .chapter-number {
-      color: #ff7a00;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
-    }
-
-    .chapter h2 {
-      font-size: 42px;
-      margin-bottom: 35px;
-    }
-
-    .chapter p {
-      color: #ddd;
-      font-size: 17px;
-      margin-bottom: 22px;
-    }
-
-    .chapter .quote {
-      border-left: 3px solid #ff7a00;
-      padding: 12px 20px;
+    .hero p {
       color: #aaa;
-      margin: 25px 0;
-      font-style: italic;
+      font-size: 17px;
+      max-width: 600px;
+      line-height: 1.7;
     }
 
-    .back {
-      display: inline-block;
+    .buttons {
       margin-top: 30px;
-      padding: 12px 22px;
-      border: 1px solid #ff7a00;
-      color: #ff7a00;
-      text-decoration: none;
-      border-radius: 5px;
     }
 
-    .back:hover {
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .orange {
       background: #ff7a00;
       color: #000;
     }
 
+    .dark {
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    /* LIVROS */
+
+    .books {
+      padding: 80px 8%;
+      border-top: 1px solid #181818;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      color: #ff7a00;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 10px;
+    }
+
+    .book-card {
+      max-width: 900px;
+      min-height: 260px;
+
+      display: flex;
+      align-items: center;
+      gap: 35px;
+
+      padding: 30px;
+
+      background: linear-gradient(
+        135deg,
+        #111 0%,
+        #080808 100%
+      );
+
+      border: 1px solid #222;
+      border-radius: 10px;
+    }
+
+    .book-cover {
+      width: 145px;
+      height: 205px;
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          #171717,
+          #3a1d00
+        );
+
+      border: 1px solid #333;
+      border-radius: 5px;
+
+      padding: 15px;
+    }
+
+    .book-cover h3 {
+      font-size: 21px;
+      line-height: 1.1;
+    }
+
+    .book-cover span {
+      display: block;
+      color: #ff7a00;
+      margin-top: 10px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-info h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .genre {
+      color: #ff7a00;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .book-info p {
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .read-button {
+      display: inline-block;
+      background: #ff7a00;
+      color: #000;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* SOBRE */
+
+    .about {
+      padding: 80px 8%;
+      border-top: 1px solid #181818;
+    }
+
+    .about h2 {
+      color: #ff7a00;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #999;
+      max-width: 700px;
+      line-height: 1.8;
+    }
+
     footer {
-      border-top: 1px solid #222;
       padding: 30px 8%;
       text-align: center;
-      color: #666;
+      color: #555;
+      border-top: 1px solid #181818;
       font-size: 13px;
     }
 
-    @media (max-width: 600px) {
+    /* CELULAR */
+
+    @media (max-width: 650px) {
+
       header {
-        flex-direction: column;
-        gap: 20px;
+        padding: 0 6%;
       }
 
       nav a {
-        margin: 0 8px;
+        margin-left: 10px;
+        font-size: 12px;
       }
 
       .hero {
-        padding: 70px 7%;
+        padding: 80px 7%;
       }
 
-      .chapter {
-        padding: 50px 7%;
+      .books,
+      .about {
+        padding: 60px 7%;
       }
 
-      .chapter h2 {
-        font-size: 32px;
+      .book-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .book-cover {
+        width: 150px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
       }
     }
   </style>
@@ -187,374 +295,148 @@
 
 <body>
 
+<!-- CABEÇALHO -->
+
 <header>
+
   <div class="logo">
     <span class="blox">BLOX</span><span class="book">BOOK</span>
   </div>
 
   <nav>
-    <a href="index.html">Início</a>
-    <a href="#livro">Livro</a>
-    <a href="#capitulo">Capítulo 1</a>
+    <a href="#inicio">Início</a>
+    <a href="#livros">Descubra</a>
+    <a href="#sobre">Sobre</a>
   </nav>
+
 </header>
 
-<section class="hero">
+
+<!-- INÍCIO -->
+
+<section class="hero" id="inicio">
 
   <div class="hero-content">
 
     <div class="tag">
-      BLOXBOOK ORIGINAL
+      BEM-VINDO À BLOXBOOK
     </div>
 
     <h1>
-      O Último<br>
-      Horizonte
+      Histórias<br>
+      começam aqui.
     </h1>
 
-    <p class="description">
-      Uma aventura começa com uma mensagem escondida,
-      uma ilha que não aparece nos mapas e um segredo
-      que alguém fará de tudo para proteger.
+    <p>
+      Descubra novos mundos, personagens e aventuras
+      através dos livros publicados pela BLOXBOOK.
     </p>
 
+    <div class="buttons">
+
+      <a href="#livros" class="button orange">
+        Explorar livros
+      </a>
+
+      <a href="#sobre" class="button dark">
+        Sobre nós
+      </a>
+
+    </div>
+
   </div>
 
 </section>
 
-<section class="book-info" id="livro">
 
-  <h2>O livro</h2>
+<!-- LIVROS -->
+
+<section class="books" id="livros">
+
+  <div class="section-title">
+
+    <span>CATÁLOGO</span>
+
+    <h2>Livros em destaque</h2>
+
+  </div>
+
+
+  <!-- LIVRO 1 -->
+
+  <div class="book-card">
+
+    <div class="book-cover">
+
+      <div>
+
+        <h3>
+          O Último<br>
+          Horizonte
+        </h3>
+
+        <span>
+          BLOXBOOK
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="book-info">
+
+      <h3>
+        O Último Horizonte
+      </h3>
+
+      <div class="genre">
+        AÇÃO • AVENTURA • MISTÉRIO
+      </div>
+
+      <p>
+        Uma mensagem misteriosa, uma ilha que não aparece
+        nos mapas e um segredo que pode mudar tudo.
+        Lucas está prestes a descobrir que algumas aventuras
+        começam quando ninguém está procurando por elas.
+      </p>
+
+      <a href="livro.html" class="read-button">
+        Ler livro →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section class="about" id="sobre">
+
+  <h2>
+    Sobre a BLOXBOOK
+  </h2>
 
   <p>
-    <strong>O Último Horizonte</strong> é uma história de
-    ação, aventura e mistério protagonizada por Lucas,
-    um jovem de 16 anos que encontra uma mensagem
-    misteriosa deixada por seu avô.
-  </p>
-
-  <p>
-    A descoberta o leva a uma ilha que aparentemente
-    não existe. Ao lado de seus amigos Rafael e Maya,
-    Lucas começa uma jornada cheia de enigmas,
-    perseguições e descobertas.
-  </p>
-
-  <p>
-    Mas eles não são os únicos procurando pelo
-    Horizonte.
+    A BLOXBOOK é uma plataforma criada para reunir
+    histórias, aventuras e novos mundos em um só lugar.
+    Aqui, cada livro pode ser o começo de uma nova jornada.
   </p>
 
 </section>
 
-<section class="chapter" id="capitulo">
 
-  <div class="chapter-number">
-    CAPÍTULO 1
-  </div>
-
-  <h2>A Mensagem</h2>
-
-  <p>
-    A chuva batia contra a janela enquanto Lucas
-    observava o céu escuro pela sala.
-  </p>
-
-  <p>
-    Naquela noite, ele não conseguia dormir.
-  </p>
-
-  <p>
-    O relógio marcava 23h47 quando ouviu três batidas
-    vindas da porta.
-  </p>
-
-  <p>
-    <strong>Toc. Toc. Toc.</strong>
-  </p>
-
-  <p>
-    Lucas levantou do sofá.
-  </p>
-
-  <p>
-    — Quem é?
-  </p>
-
-  <p>
-    Nenhuma resposta.
-  </p>
-
-  <p>
-    Ele abriu a porta lentamente.
-  </p>
-
-  <p>
-    Não havia ninguém.
-  </p>
-
-  <p>
-    Apenas uma pequena caixa de madeira no chão.
-  </p>
-
-  <p>
-    Lucas olhou para os dois lados da rua.
-    Tudo estava vazio.
-  </p>
-
-  <p>
-    Pegou a caixa e fechou a porta.
-  </p>
-
-  <p>
-    Na tampa havia apenas uma palavra gravada:
-  </p>
-
-  <div class="quote">
-    HORIZONTE.
-  </div>
-
-  <p>
-    Ele reconheceu aquela palavra.
-  </p>
-
-  <p>
-    Era o nome que seu avô mencionava algumas vezes
-    antes de desaparecer das conversas da família.
-  </p>
-
-  <p>
-    Lucas colocou a caixa sobre a mesa e percebeu
-    que ela não tinha fechadura.
-  </p>
-
-  <p>
-    Quando passou os dedos pela lateral,
-    encontrou uma pequena abertura.
-  </p>
-
-  <p>
-    Pressionou.
-  </p>
-
-  <p>
-    <strong>Clique.</strong>
-  </p>
-
-  <p>
-    A tampa se abriu.
-  </p>
-
-  <p>
-    Dentro havia uma fotografia antiga, uma bússola
-    enferrujada e um pedaço de papel dobrado.
-  </p>
-
-  <p>
-    Lucas abriu o papel.
-  </p>
-
-  <p>
-    Havia apenas uma frase:
-  </p>
-
-  <div class="quote">
-    “Quando o horizonte desaparecer, siga a direção
-    que ninguém consegue encontrar.”
-  </div>
-
-  <p>
-    Abaixo da frase estava desenhado um símbolo estranho:
-    um círculo cortado por três linhas.
-  </p>
-
-  <p>
-    Lucas ficou alguns segundos olhando para aquilo.
-  </p>
-
-  <p>
-    Então virou a fotografia.
-  </p>
-
-  <p>
-    No verso havia uma data:
-    <strong>17 de agosto de 1989.</strong>
-  </p>
-
-  <p>
-    E três nomes:
-  </p>
-
-  <div class="quote">
-    Arthur — Miguel — Helena.
-  </div>
-
-  <p>
-    Seu avô era Arthur.
-  </p>
-
-  <p>
-    Lucas sentiu um arrepio.
-  </p>
-
-  <p>
-    Ele conhecia aquela fotografia.
-    Já tinha visto uma parecida em um álbum antigo da família.
-  </p>
-
-  <p>
-    Mas havia algo diferente.
-  </p>
-
-  <p>
-    No canto da imagem, quase escondido pela sombra,
-    aparecia uma ilha.
-  </p>
-
-  <p>
-    Lucas pegou o celular e fotografou a imagem.
-  </p>
-
-  <p>
-    — Que lugar é esse?
-  </p>
-
-  <p>
-    A resposta veio alguns segundos depois.
-  </p>
-
-  <p>
-    Uma mensagem apareceu no celular.
-  </p>
-
-  <div class="quote">
-    “Você encontrou a caixa.”
-  </div>
-
-  <p>
-    Lucas congelou.
-  </p>
-
-  <p>
-    Outra mensagem chegou.
-  </p>
-
-  <div class="quote">
-    “Então agora eles sabem que você sabe.”
-  </div>
-
-  <p>
-    Ele olhou para a janela.
-  </p>
-
-  <p>
-    Um carro preto estava parado do outro lado da rua.
-  </p>
-
-  <p>
-    Os faróis estavam apagados.
-  </p>
-
-  <p>
-    Lucas se aproximou lentamente da cortina.
-  </p>
-
-  <p>
-    O carro continuava lá.
-  </p>
-
-  <p>
-    Sem se mover.
-  </p>
-
-  <p>
-    O celular vibrou novamente.
-  </p>
-
-  <div class="quote">
-    “Não confie em ninguém.”
-  </div>
-
-  <p>
-    Lucas largou a cortina.
-  </p>
-
-  <p>
-    Naquele momento, percebeu que aquela caixa
-    não havia sido enviada por acaso.
-  </p>
-
-  <p>
-    Seu avô havia escondido alguma coisa.
-  </p>
-
-  <p>
-    E alguém estava procurando por ela.
-  </p>
-
-  <p>
-    Lucas pegou a bússola.
-  </p>
-
-  <p>
-    A agulha começou a girar.
-  </p>
-
-  <p>
-    Norte. Sul. Leste. Oeste.
-  </p>
-
-  <p>
-    Depois parou.
-  </p>
-
-  <p>
-    Apontando diretamente para a janela.
-  </p>
-
-  <p>
-    Lucas olhou para o carro.
-  </p>
-
-  <p>
-    As luzes acenderam.
-  </p>
-
-  <p>
-    O motor começou.
-  </p>
-
-  <p>
-    O carro saiu lentamente pela rua.
-  </p>
-
-  <p>
-    Antes de desaparecer na esquina, Lucas viu uma coisa
-    escrita na lateral:
-  </p>
-
-  <div class="quote">
-    HORIZONTE.
-  </div>
-
-  <p>
-    Naquela noite, Lucas entendeu que sua vida acabara
-    de mudar.
-  </p>
-
-  <p>
-    E a aventura estava apenas começando.
-  </p>
-
-  <a class="back" href="index.html">
-    ← Voltar para a BLOXBOOK
-  </a>
-
-</section>
+<!-- RODAPÉ -->
 
 <footer>
+
   © 2026 BLOXBOOK — Histórias começam aqui.
+
 </footer>
+
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>BLOXBOOK</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -17,19 +19,24 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #000;
       color: #fff;
+      line-height: 1.6;
     }
+
+    /* CABEÇALHO */
 
     header {
       height: 75px;
       padding: 0 8%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       border-bottom: 1px solid #222;
     }
 
     .logo {
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 900;
       letter-spacing: -1px;
     }
@@ -57,7 +64,9 @@
 
     .hero {
       min-height: 520px;
+
       padding: 100px 8%;
+
       display: flex;
       align-items: center;
 
@@ -70,29 +79,39 @@
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .tag {
       color: #ff7a00;
+
       font-size: 13px;
       font-weight: bold;
+
       letter-spacing: 3px;
+
       margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: clamp(45px, 8vw, 82px);
+
       line-height: .95;
+
       margin-bottom: 25px;
     }
 
     .hero p {
       color: #aaa;
+
       font-size: 17px;
-      max-width: 600px;
+
+      max-width: 620px;
+
       line-height: 1.7;
     }
+
+    /* BOTÕES */
 
     .buttons {
       margin-top: 30px;
@@ -100,10 +119,15 @@
 
     .button {
       display: inline-block;
+
       text-decoration: none;
+
       padding: 13px 25px;
+
       border-radius: 5px;
+
       margin-right: 10px;
+
       font-weight: bold;
     }
 
@@ -117,147 +141,84 @@
       color: #fff;
     }
 
-    /* LIVROS */
+    .dark:hover {
+      border-color: #ff7a00;
+      color: #ff7a00;
+    }
 
-    .books {
-      padding: 80px 8%;
+    /* DESCOBRA */
+
+    .discover {
+      padding: 90px 8%;
+
       border-top: 1px solid #181818;
     }
 
-    .section-title {
-      margin-bottom: 40px;
-    }
-
-    .section-title span {
+    .discover span {
       color: #ff7a00;
+
       font-size: 13px;
+
       font-weight: bold;
+
       letter-spacing: 3px;
     }
 
-    .section-title h2 {
+    .discover h2 {
       font-size: 38px;
+
       margin-top: 10px;
+
+      margin-bottom: 20px;
     }
 
-    .book-card {
-      max-width: 900px;
-      min-height: 260px;
-
-      display: flex;
-      align-items: center;
-      gap: 35px;
-
-      padding: 30px;
-
-      background: linear-gradient(
-        135deg,
-        #111 0%,
-        #080808 100%
-      );
-
-      border: 1px solid #222;
-      border-radius: 10px;
-    }
-
-    .book-cover {
-      width: 145px;
-      height: 205px;
-      flex-shrink: 0;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      background:
-        linear-gradient(
-          145deg,
-          #171717,
-          #3a1d00
-        );
-
-      border: 1px solid #333;
-      border-radius: 5px;
-
-      padding: 15px;
-    }
-
-    .book-cover h3 {
-      font-size: 21px;
-      line-height: 1.1;
-    }
-
-    .book-cover span {
-      display: block;
-      color: #ff7a00;
-      margin-top: 10px;
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    .book-info {
-      flex: 1;
-    }
-
-    .book-info h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .genre {
-      color: #ff7a00;
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .book-info p {
+    .discover p {
       color: #999;
-      line-height: 1.6;
-      margin-bottom: 22px;
-    }
 
-    .read-button {
-      display: inline-block;
-      background: #ff7a00;
-      color: #000;
-      text-decoration: none;
-      padding: 11px 20px;
-      border-radius: 5px;
-      font-weight: bold;
+      max-width: 650px;
     }
 
     /* SOBRE */
 
     .about {
-      padding: 80px 8%;
+      padding: 90px 8%;
+
       border-top: 1px solid #181818;
     }
 
     .about h2 {
       color: #ff7a00;
+
       font-size: 30px;
+
       margin-bottom: 20px;
     }
 
     .about p {
       color: #999;
+
       max-width: 700px;
+
       line-height: 1.8;
     }
 
+    /* RODAPÉ */
+
     footer {
       padding: 30px 8%;
+
       text-align: center;
+
       color: #555;
+
       border-top: 1px solid #181818;
+
       font-size: 13px;
     }
 
     /* CELULAR */
 
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
 
       header {
         padding: 0 6%;
@@ -272,28 +233,24 @@
         padding: 80px 7%;
       }
 
-      .books,
+      .discover,
       .about {
-        padding: 60px 7%;
-      }
-
-      .book-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .book-cover {
-        width: 150px;
+        padding: 65px 7%;
       }
 
       .hero h1 {
         font-size: 48px;
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
 
 <!-- CABEÇALHO -->
 
@@ -304,9 +261,19 @@
   </div>
 
   <nav>
-    <a href="#inicio">Início</a>
-    <a href="#livros">Descubra</a>
-    <a href="#sobre">Sobre</a>
+
+    <a href="#inicio">
+      Início
+    </a>
+
+    <a href="#descubra">
+      Descubra
+    </a>
+
+    <a href="#sobre">
+      Sobre
+    </a>
+
   </nav>
 
 </header>
@@ -328,14 +295,14 @@
     </h1>
 
     <p>
-      Descubra novos mundos, personagens e aventuras
-      através dos livros publicados pela BLOXBOOK.
+      Um novo espaço para descobrir histórias,
+      aventuras e mundos criados para você.
     </p>
 
     <div class="buttons">
 
-      <a href="#livros" class="button orange">
-        Explorar livros
+      <a href="#descubra" class="button orange">
+        Explorar
       </a>
 
       <a href="#sobre" class="button dark">
@@ -349,65 +316,22 @@
 </section>
 
 
-<!-- LIVROS -->
+<!-- DESCUBRA -->
 
-<section class="books" id="livros">
+<section class="discover" id="descubra">
 
-  <div class="section-title">
+  <span>
+    DESCUBRA
+  </span>
 
-    <span>CATÁLOGO</span>
+  <h2>
+    Novas histórias estão chegando.
+  </h2>
 
-    <h2>Livros em destaque</h2>
-
-  </div>
-
-
-  <!-- LIVRO 1 -->
-
-  <div class="book-card">
-
-    <div class="book-cover">
-
-      <div>
-
-        <h3>
-          O Último<br>
-          Horizonte
-        </h3>
-
-        <span>
-          BLOXBOOK
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <div class="book-info">
-
-      <h3>
-        O Último Horizonte
-      </h3>
-
-      <div class="genre">
-        AÇÃO • AVENTURA • MISTÉRIO
-      </div>
-
-      <p>
-        Uma mensagem misteriosa, uma ilha que não aparece
-        nos mapas e um segredo que pode mudar tudo.
-        Lucas está prestes a descobrir que algumas aventuras
-        começam quando ninguém está procurando por elas.
-      </p>
-
-      <a href="livro.html" class="read-button">
-        Ler livro →
-      </a>
-
-    </div>
-
-  </div>
+  <p>
+    A BLOXBOOK está preparando um catálogo de
+    histórias, aventuras e mundos para você explorar.
+  </p>
 
 </section>
 
@@ -421,9 +345,9 @@
   </h2>
 
   <p>
-    A BLOXBOOK é uma plataforma criada para reunir
-    histórias, aventuras e novos mundos em um só lugar.
-    Aqui, cada livro pode ser o começo de uma nova jornada.
+    A BLOXBOOK nasceu para reunir histórias e dar
+    espaço para novos mundos, personagens e aventuras.
+    Este é apenas o começo.
   </p>
 
 </section>
@@ -439,4 +363,5 @@
 
 
 </body>
+
 </html>
